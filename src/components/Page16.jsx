@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Page6() {
+export default function Page16() {
   return (
     <div className="page-content">
-      <h1>Géoradar</h1>
+      <h1>Sismique</h1>
       <p>
-        Qu'est ce qu'un Géoradar
+        Je sais pas a quoi ca correspond j'avoue
       </p>
     </div>
   );
