@@ -20,11 +20,15 @@ export default function PageCard({
     zIndex = total - index; // pile à droite
   }
 
+const isCover = index === 0 || index === total - 1;
+
   return (
     <div
-      className={`page ${isFlipped ? "flipped" : ""} ${
-        FrontComponent.name === "Page3" ? "page-sommaire-bulles" : ""
-      }`}
+     className={`page 
+      ${isFlipped ? "flipped" : ""} 
+      ${isCover ? "cover" : ""}
+      ${FrontComponent.name === "Page3" ? "page-sommaire-bulles" : ""}
+    `}
       style={{ zIndex }}
     >
       <div className="front">

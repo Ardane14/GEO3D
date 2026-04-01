@@ -3,9 +3,9 @@ import React from "react";
 export default function Page5({ goToPage }) {
   
   const days = [
-    { label: "Jour 5", page: 4 },
-    { label: "Jour 6", page: 4 },
-    { label: "Jour 7", page: 6 }
+    { label: "Eléctromagnetique", page: 14 },
+    { label: "Sismique", page: 16 },
+    { label: "Spectrométrie", page: 18 },
   ];
 
   return (

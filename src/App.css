@@ -14,18 +14,15 @@ body {
   min-height: 100vh;
 }
 
-/* carnet */
-.hardCover {
-  background-color: #5f472d;
-  padding: 5px;
-}
-
 .book {
 
   position: relative;
 
   width: 900px;
   height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   perspective: 2500px;
 

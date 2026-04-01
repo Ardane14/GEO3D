@@ -3,7 +3,7 @@ import React from "react";
 export default function Page10() {
   return (
     <div className="page-content">
-      <h1>Tomographie</h1>
+      <h1>Géoradar</h1>
       <p>
         Les fameux clou éléctrique
       </p>

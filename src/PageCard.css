@@ -1,3 +1,7 @@
+.book {
+  display: flex;
+  justify-content: center;
+}
 .page {
 
   position: absolute;
@@ -17,8 +21,71 @@
   transform: rotateY(-180deg);
 }
 
-/* pages */
+/* couverture */
+.cover {
+  width: 52%;
+  height: 104%;
+}
 
+.cover .front,
+.cover .back {
+
+  background: linear-gradient(
+    135deg,
+    #7b5e3b,
+    #5f472d
+  );
+
+  color: #f4f1ea;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 40px;
+
+  box-shadow:
+    inset 0 0 40px rgba(0,0,0,0.3),
+    0 10px 25px rgba(0,0,0,0.4);
+
+}
+
+.cover h1 {
+
+  font-size: 36px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+
+}
+
+.cover p {
+
+  font-size: 18px;
+
+  opacity: 0.85;
+
+  font-style: italic;
+
+}
+
+.cover p {
+
+  font-size: 18px;
+
+  opacity: 0.85;
+
+  font-style: italic;
+
+}
+
+/* pages */
 .front,
 .back {
 
@@ -51,15 +118,11 @@
 }
 
 /* style texte */
-
 .front,
 .back {
 
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-
   text-align: left;
-
   line-height: 1.6;
-
   font-size: 18px;
 }

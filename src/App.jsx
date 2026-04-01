@@ -79,7 +79,7 @@ const goToPage = (page) => {
 
   return (
     <div className="container">
-      <div className="hardCover">
+  
         <div className="book">
 
         {cards.map((card, index) => (
@@ -98,8 +98,6 @@ const goToPage = (page) => {
         <div className="spine"></div>
 
         </div>
-
-      </div>
 
       <div className="controls">
 
