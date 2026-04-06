@@ -7,17 +7,22 @@ export default function PageCard({
   index,
   currentCard,
   total,
-  goToPage
+  goToPage,
+  animatingIndex
 }) {
 
   let zIndex;
 
-  if (index === currentCard) {
-    zIndex = total + 1; // carte qui flip
+  if (index === animatingIndex) {
+    zIndex = 1000;
+
   } else if (index < currentCard) {
-    zIndex = index; // déjà tournée
+    // pages à gauche
+    zIndex = index;
+
   } else {
-    zIndex = total - index; // pile à droite
+    // pages à droite
+    zIndex = total - index;
   }
 
 const isCover = index === 0 || index === total - 1;

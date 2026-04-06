@@ -2,30 +2,34 @@ body {
   margin: 0;
   background: #f4f1ea;
   font-family: "Georgia", serif;
+  font-family: "Patrick Hand", cursive;
 }
 
-/* centre le carnet */
 .container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-
+  align-items: center;
   min-height: 100vh;
 }
 
-.book {
+.layout {
+  display: flex;
+  flex-direction: row; /* IMPORTANT */
+  align-items: center;
+  gap: 40px;
+}
 
+.book {
   position: relative;
 
-  width: 900px;
-  height: 600px;
+  width: min(95vw, 1100px);
+  aspect-ratio: 3 / 2;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
   perspective: 2500px;
-
 }
 
 /* tranche du carnet */
@@ -63,97 +67,64 @@ body {
 
 }
 
-.controls {
-
-  margin-top: 40px;
-
-  display: flex;
-  gap: 20px;
-
-}
-
-.controls button {
-
-  padding: 12px 22px;
-
-  font-size: 16px;
-
+.nav-btn {
+  padding: 14px;
+  font-size: 20px;
   border: none;
-
-  border-radius: 8px;
-
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
   background: #7b5e3b;
   color: white;
-
   cursor: pointer;
-
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
 
-.controls button:hover {
-
+.nav-btn:hover {
   background: #5f472d;
-
-  transform: translateY(-2px);
-
+  transform: scale(1.1);
 }
 
-.controls button:disabled {
-
-  opacity: 0.4;
+.nav-btn:disabled {
+  opacity: 0.3;
   cursor: default;
   transform: none;
-
 }
 
 .sommaire h1 {
-
   margin-bottom: 30px;
-
 }
 
 /* liste */
 
 .sommaire-list {
-
   list-style: none;
-
   padding: 0;
-
   margin: 0;
-
   display: flex;
   flex-direction: column;
-
   gap: 14px;
-
 }
 
 /* ligne */
 
 .sommaire-list li {
-
   cursor: pointer;
-
   font-size: 20px;
-
   padding: 6px 0;
-
   border-bottom: 1px dotted #c9b79c;
-
   transition: all 0.2s ease;
-
 }
 
 /* hover */
 
 .sommaire-list li:hover {
-
   color: #7b5e3b;
-
   transform: translateX(6px);
-
 }
 
 /* ============================= */

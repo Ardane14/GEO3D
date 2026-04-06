@@ -41,23 +41,34 @@ export default function App() {
 
   const [currentCard, setCurrentCard] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [animatingIndex, setAnimatingIndex] = useState(null);
 
   const flipNext = () => {
     if (isAnimating || currentCard >= cards.length) return;
 
     setIsAnimating(true);
+    setAnimatingIndex(currentCard); // 👈 page qui tourne
+
     setCurrentCard(currentCard + 1);
 
-    setTimeout(() => setIsAnimating(false), 900);
+    setTimeout(() => {
+      setIsAnimating(false);
+      setAnimatingIndex(null);
+    }, 900);
   };
 
   const flipPrev = () => {
     if (isAnimating || currentCard <= 0) return;
 
     setIsAnimating(true);
+    setAnimatingIndex(currentCard - 1); // 👈 page qui tourne
+
     setCurrentCard(currentCard - 1);
 
-    setTimeout(() => setIsAnimating(false), 900);
+    setTimeout(() => {
+      setIsAnimating(false);
+      setAnimatingIndex(null);
+    }, 900);
   };
 
   // 👉 fonction pour le sommaire
@@ -78,10 +89,18 @@ const goToPage = (page) => {
 };
 
   return (
-    <div className="container">
-  
-        <div className="book">
+    <div class="container">
+    <div class="layout">
 
+      <button 
+        class="nav-btn left"
+        onClick={flipPrev}
+        disabled={currentCard === 0}
+      >
+        ←
+      </button>
+
+      <div class="book">
         {cards.map((card, index) => (
           <PageCard
             key={index}
@@ -92,25 +111,21 @@ const goToPage = (page) => {
             currentCard={currentCard}
             total={cards.length}
             goToPage={goToPage}
+            animatingIndex={animatingIndex}
           />
         ))}
+        <div class="spine"></div>
+      </div>
 
-        <div className="spine"></div>
+      <button 
+        class="nav-btn right"
+        onClick={flipNext}
+        disabled={currentCard === cards.length}
+      >
+        →
+      </button>
 
-        </div>
-
-      <div className="controls">
-
-        <button onClick={flipPrev} disabled={currentCard === 0}>
-          ← Page précédente
-        </button>
-
-        <button onClick={flipNext} disabled={currentCard === cards.length}>
-          Page suivante →
-        </button>
-
-        </div>
-
-    </div>
+  </div>
+  </div>
   );
 }

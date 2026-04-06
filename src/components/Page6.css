@@ -1,0 +1,93 @@
+/* fond carnet */
+.page6 {
+  height: 100%;
+
+  background:
+    radial-gradient(#d8d2c4 1px, transparent 1px);
+  background-size: 12px 12px;
+
+  font-family: "Georgia", serif;
+}
+
+.title {
+  font-family: "Caveat", cursive;
+  font-size: 38px;
+  letter-spacing: 1px;
+}
+
+/* blocs papier */
+.note {
+  background: #fdfbf4;
+  padding: 14px 18px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  /* ombre douce */
+  box-shadow:
+    0 3px 8px rgba(0,0,0,0.08),
+    inset 0 0 2px rgba(0,0,0,0.05);
+
+  /* petit effet imparfait */
+  transform: rotate(-1deg);
+}
+
+.note:nth-child(2) {
+  transform: rotate(1.2deg);
+}
+
+.note strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* bas de page */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+/* cartes */
+.card {
+  width: 45%;
+  padding: 10px;
+  background: #f4efe6;
+
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+
+  position: relative;
+}
+
+/* effet papier incliné */
+.sketch {
+  transform: rotate(-4deg);
+}
+
+.photo {
+  transform: rotate(3deg);
+}
+
+/* titre carte */
+.card-title {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* faux dessin */
+.fake-drawing {
+  height: 120px;
+  background: repeating-linear-gradient(
+    45deg,
+    #333,
+    #333 2px,
+    transparent 2px,
+    transparent 6px
+  );
+  opacity: 0.2;
+}
+
+/* fausse image */
+.fake-image {
+  height: 120px;
+  background: linear-gradient(135deg, #8aa, #556);
+}
