@@ -17,7 +17,18 @@ export default function Page6() {
 
       <div className="note">
         <strong>Résultat</strong>
-        <p>Une carte de résistivité</p>
+          <p>
+            Une carte de{" "}
+            <span className="tooltip-word">
+              résistivité
+              <span className="tooltip-card">
+                La résistivité est une mesure de la capacité d’un matériau à 
+                s’opposer au passage du courant électrique.  
+                <br /><br />
+                Plus elle est élevée, moins le courant circule facilement.
+              </span>
+            </span>
+          </p>
       </div>
 
       <div className="bottom">
