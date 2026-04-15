@@ -21,8 +21,10 @@ import Page17 from "./components/Page17";
 import Page18 from "./components/Page18";
 import Page19 from "./components/Page19";
 import Page20 from "./components/Page20";
+import Page21 from "./components/Page21";
 
 import "./App.css";
+import Experience from "./components/Experience";
 
 const cards = [
   { front: Page1, back: Page2 },
@@ -35,6 +37,7 @@ const cards = [
   { front: Page15, back: Page16 },
   { front: Page17, back: Page18 },
   { front: Page19, back: Page20 },
+  { front: Experience, back: Page21 },
 ];
 
 export default function App() {
@@ -101,6 +104,7 @@ const goToPage = (page) => {
       </button>
 
       <div class="book">
+        
         {cards.map((card, index) => (
           <PageCard
             key={index}
@@ -114,6 +118,7 @@ const goToPage = (page) => {
             animatingIndex={animatingIndex}
           />
         ))}
+        
         <div class="spine"></div>
       </div>
 
