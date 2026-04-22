@@ -1,0 +1,19 @@
+.page2 {
+  position: relative;
+  overflow: visible !important;
+}
+
+.letter-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400%; /*ca marche pas en responsive pour l'instant a revoir plus tard*/
+  z-index: 8888;
+  min-height: 400px;
+  min-width: 400px;
+  object-fit: cover;
+}
+
+
+

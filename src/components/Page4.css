@@ -1,0 +1,16 @@
+.page4 {
+  position: relative;
+  overflow: visible !important;
+}
+
+.lea-animation-1 {
+  position: absolute;
+  top: -50%;
+  left: 0%;
+  transform: translate(-50%, 10%);
+  width: 300%; /*ca marche pas en responsive pour l'instant a revoir plus tard*/
+  z-index: 8888;
+  min-height: 200px;
+  min-width: 200px;
+  object-fit: cover;
+}

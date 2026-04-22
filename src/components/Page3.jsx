@@ -11,7 +11,7 @@ export default function Page3({ goToPage }) {
   ];
 
   return (
-    <div className="page-content sommaire-bulles">
+    <div className="page-content sommaire sommaire-bulles">
 
       <h1>Sommaire</h1>
 
@@ -19,7 +19,7 @@ export default function Page3({ goToPage }) {
         
         <div
           key={i}
-          className={`bubble-row bubble-${i}`}
+          className={`sommaire-list bubble-row bubble-${i}`}
           onClick={() => goToPage(day.page)}
         >
           <span className="bubble-label">{day.label}</span>

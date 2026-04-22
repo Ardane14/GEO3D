@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import "./Page2.css";
+import lettreVideo from "../assets/Enveloppe.webm";
 
-export default function Page2({ goToPage }) {
+export default function Page2({ isFlipped }) {
+  const videoRef = useRef(null);
 
-  const days = [
-    { label: "Tomographie", page: 6 },
-    { label: "Magnétique", page: 8 },
-    { label: "Géoradar", page: 10 },
-    { label: "Gravimetrie", page: 12 },
-    { label: "Eléctromagnetique", page: 14 },
-  ];
+  useEffect(() => {
+    if (isFlipped && videoRef.current) {
+      videoRef.current.play();
+    }
+  }, [isFlipped]);
 
+  return (
+    <div className="page2">
+      <video
+        ref={videoRef}
+        className="letter-animation"
+        src={lettreVideo}
+        muted
+        playsInline
+      />
+    </div>
+  );
 }

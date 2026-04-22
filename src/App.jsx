@@ -92,19 +92,18 @@ const goToPage = (page) => {
 };
 
   return (
-    <div class="container">
-    <div class="layout">
+    <div className="container">
+    <div className="layout">
 
       <button 
-        class="nav-btn left"
+        className="nav-btn left"
         onClick={flipPrev}
         disabled={currentCard === 0}
       >
         ←
       </button>
 
-      <div class="book">
-        
+      <div className="book">
         {cards.map((card, index) => (
           <PageCard
             key={index}
@@ -118,12 +117,11 @@ const goToPage = (page) => {
             animatingIndex={animatingIndex}
           />
         ))}
-        
-        <div class="spine"></div>
+        <div className="spine"></div>
       </div>
 
       <button 
-        class="nav-btn right"
+        className="nav-btn right"
         onClick={flipNext}
         disabled={currentCard === cards.length}
       >
