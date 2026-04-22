@@ -63,6 +63,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 5000000;
 }
 
 .nav-btn:hover {
@@ -80,27 +81,15 @@ body {
   margin-bottom: 30px;
 }
 
-/* liste */
 .sommaire-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-/* ligne */
-.sommaire-list li {
   cursor: pointer;
   font-size: 20px;
   padding: 6px 0;
-  border-bottom: 1px dotted #c9b79c;
   transition: all 0.2s ease;
 }
 
 /* hover */
-.sommaire-list li:hover {
+.sommaire-list:hover {
   color: #7b5e3b;
   transform: translateX(6px);
 }

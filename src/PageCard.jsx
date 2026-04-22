@@ -14,7 +14,7 @@ export default function PageCard({
   let zIndex;
 
   if (index === animatingIndex) {
-    zIndex = 1000;
+    zIndex = 8888;
 
   } else if (index < currentCard) {
     // pages à gauche
@@ -37,11 +37,18 @@ const isCover = index === 0 || index === total - 1;
       style={{ zIndex }}
     >
       <div className="front">
-        <FrontComponent goToPage={goToPage} />
+        <FrontComponent 
+          goToPage={goToPage}
+          currentCard={currentCard}
+        />
         </div>
 
         <div className="back">
-        <BackComponent goToPage={goToPage} />
+        <BackComponent 
+        goToPage={goToPage}
+        isFlipped={isFlipped}
+        zIndex={zIndex}
+         />
         </div>
     </div>
 

@@ -14,7 +14,7 @@ export default function Page5({ goToPage }) {
       {days.map((day, i) => (
         <div
           key={i}
-          className={`bubble-row bubble-${i}`}
+          className={`sommaire-list bubble-row bubble-${i}`}
           onClick={() => goToPage(day.page)}
         >
           <span className="bubble-label">{day.label}</span>
