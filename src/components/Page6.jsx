@@ -1,5 +1,6 @@
 import React from "react";
 import "./Page6.css";
+import Experience from "./Experience";
 
 export default function Page6() {
   return (
@@ -40,7 +41,7 @@ export default function Page6() {
 
         <div className="card photo">
           <p className="card-title">En pratique</p>
-          <div className="fake-image"></div>
+          <Experience />
         </div>
 
       </div>
