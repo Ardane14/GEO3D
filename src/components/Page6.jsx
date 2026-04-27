@@ -21,9 +21,9 @@ export default function Page6() {
     return (
       <>
         <p className="card-title">En pratique</p>
-        <div className="media-container three-container">
-          <div className="three-placeholder">Zone 3D</div>
-        </div>
+          <div className="media-container three-container">
+            <Experience />
+          </div>
       </>
     );
   };
