@@ -1,0 +1,13 @@
+div:fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.canvas-container:fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+:fullscreen {
+  overflow: hidden;
+}

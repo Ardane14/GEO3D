@@ -26,7 +26,6 @@ export default function Page7() {
           Zone de commentaire :
         </p>
       </div>
-
     </div>
   );
 }

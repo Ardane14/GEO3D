@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { createPortal } from "react-dom";
 import "./Page6.css";
+import Experience from "./Experience";
 import MapVideo from "../assets/Maps.mp4";
 
 export default function Page6() {
@@ -20,9 +21,9 @@ export default function Page6() {
     return (
       <>
         <p className="card-title">En pratique</p>
-        <div className="media-container three-container">
-          <div className="three-placeholder">Zone 3D</div>
-        </div>
+          <div className="media-container three-container">
+            <Experience />
+          </div>
       </>
     );
   };
