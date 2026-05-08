@@ -151,3 +151,196 @@
   transform: rotate(-8deg);
   border-radius: 3px;
 }
+
+/* ========================= */
+/* COMMENTAIRES */
+/* ========================= */
+.comments-section {
+  background: #fdfbf4;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.08),
+    inset 0 0 2px rgba(0,0,0,0.05);
+}
+
+/* titre */
+.comments-section h2 {
+  margin-top: 0;
+  font-family: "Caveat", cursive;
+  font-size: 34px;
+  color: #5f472d;
+}
+
+/* ========================= */
+/* INPUT */
+/* ========================= */
+.comment-input-zone {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.comment-input-zone textarea {
+  resize: none;
+  min-height: 90px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 16px;
+  background: #f7f1e6;
+  font-family: "Georgia", serif;
+  box-shadow:
+    inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* bouton */
+.comment-input-zone button {
+  align-self: flex-end;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #7b5e3b;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.comment-input-zone button:hover {
+  background: #5f472d;
+  transform: translateY(-2px);
+}
+
+/* ========================= */
+/* LISTE */
+/* ========================= */
+.comments-list {
+  max-height: 220px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-right: 8px;
+}
+
+/* scroll */
+.comments-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.comments-list::-webkit-scrollbar-thumb {
+  background: rgba(90,70,40,0.3);
+  border-radius: 20px;
+}
+
+/* commentaire */
+.comment-card {
+  background: #f4efe6;
+  border-radius: 10px;
+  animation: fadeIn 0.3s ease;
+  box-shadow:
+    0 2px 6px rgba(0,0,0,0.08);
+}
+
+.comment-card p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* date */
+.comment-date {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-bottom: 8px;
+}
+
+/* Bouton d'appel */
+.open-comments-btn {
+  background: #f4efe6;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: "Caveat", cursive;
+  font-size: 22px;
+  color: #5f472d;
+  width: fit-content;
+  margin: 10px auto;
+  transform: rotate(1deg);
+  transition: 0.3s;
+}
+
+.open-comments-btn:hover {
+  transform: scale(1.05) rotate(0deg);
+}
+
+/* Overlay pour flouter légèrement l'arrière-plan */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+/* La carte active */
+.comment-card-active {
+  width: 90%;
+  max-width: 450px;
+  background: #fdfbf4;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+}
+
+.modal-title {
+  font-family: "Caveat", cursive;
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #5f472d;
+}
+
+/* Zone de scroll interne */
+.comments-list-portal {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 15px;
+  padding-right: 10px;
+  max-height: 400px; /*résponsive a faire plus tard eheh*/ 
+}
+
+.single-comment {
+  background: #f4efe6;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border-left: 3px solid #7b5e3b;
+}
+
+.single-comment small {
+  display: block;
+  font-size: 10px;
+  opacity: 0.6;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background: #e0ddd5;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
